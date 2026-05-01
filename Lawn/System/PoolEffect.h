@@ -20,6 +20,7 @@ public:
 	Sexy::MemoryImage*	mCausticImage;
 	LawnApp*			mApp;
 	int					mPoolCounter;
+	int					mLastUpdatedFrame;
 
 public:
 	void				PoolEffectInitialize();

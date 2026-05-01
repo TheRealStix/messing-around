@@ -14,6 +14,8 @@ void PoolEffect::PoolEffectInitialize()
 
     mApp = gLawnApp;
 
+    mLastUpdatedFrame = -1;
+
     mCausticImage = new MemoryImage(gSexyAppBase);
     mCausticImage->mWidth = CAUSTIC_IMAGE_WIDTH;
     mCausticImage->mHeight = CAUSTIC_IMAGE_HEIGHT;
@@ -233,5 +235,12 @@ void PoolEffect::PoolEffectDraw(Sexy::Graphics* g, bool theIsNight)
 
 void PoolEffect::PoolEffectUpdate()
 {
+    int currentFrame = mApp->mAppCounter;
+
+    if (mLastUpdatedFrame == currentFrame)
+        return;
+
+    mLastUpdatedFrame = currentFrame;
+
     ++mPoolCounter;
 }
