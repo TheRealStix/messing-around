@@ -972,7 +972,6 @@ enum ReanimationType
     REANIM_BUSH3_NIGHT,
     REANIM_BUSH4_NIGHT,
     REANIM_BUSH5_NIGHT,
-    REANIM_PEASHOOTER_SKIN1,
     NUM_REANIMS
 };
 enum ReanimLoopType

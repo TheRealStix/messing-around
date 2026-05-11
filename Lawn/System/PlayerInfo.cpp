@@ -6,6 +6,7 @@
 #include "../../Sexy.TodLib/TodCommon.h"
 #include "../../SexyAppFramework/Buffer.h"
 #include "../../SexyAppFramework/SexyAppBase.h"
+#include "../Plant.h"
 
 static int gUserVersion = 12;
 
@@ -87,6 +88,10 @@ void PlayerInfo::SyncDetails(DataSync& theSync)
 	for (int i = 0; i < NUM_SEEDS_IN_CHOOSER; i++)
 	{
 		theSync.SyncBool(mFavoriteSeeds[i]);
+	}
+	for (int i = 0; i < NUM_SEEDS_IN_CHOOSER; i++)
+	{
+		theSync.SyncLong(mSeedsSkin[i]);
 	}
 }
 
@@ -216,4 +221,13 @@ void PlayerInfo::ToggleStatsMode() {
 
 void PlayerInfo::ToggleFavoriteSeed(int theIndex) {
 	mFavoriteSeeds[theIndex] = !mFavoriteSeeds[theIndex];
+}
+
+void PlayerInfo::SwitchSeedCostume(SeedType theSeedType) {
+
+	int aNextSkin = mSeedsSkin[(int)theSeedType] + 1;
+	if (PlantHasSkin(theSeedType, aNextSkin))
+		mSeedsSkin[(int)theSeedType] = aNextSkin;
+	else
+		mSeedsSkin[(int)theSeedType] = 0;
 }

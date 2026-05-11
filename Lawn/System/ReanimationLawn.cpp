@@ -8,6 +8,7 @@
 #include "../../Sexy.TodLib/Attachment.h"
 #include "../../SexyAppFramework/MemoryImage.h"
 #include "../../Resources.h"
+#include "../System/PlayerInfo.h"
 
 void ReanimatorCache::UpdateReanimationForVariation(Reanimation* theReanim, DrawVariation theDrawVariation)
 {
@@ -64,6 +65,17 @@ void ReanimatorCache::DrawReanimatorFrame(Graphics* g, float thePosX, float theP
 {
 	Reanimation aReanim;
 	aReanim.ReanimationInitializeType(thePosX, thePosY, theReanimationType);
+
+	for (int i = 0; i < aReanim.mDefinition->mTrackCount; i++)
+	{
+		ReanimatorTrack& aTrack = aReanim.mDefinition->mTracks[i];
+
+		if (strncmp(aTrack.mName, "skin_", 5) == 0)
+		{
+			aReanim.AssignRenderGroupToTrack(aTrack.mName, RENDER_GROUP_HIDDEN);
+		}
+	}
+
 
 	if (theTrackName != nullptr && aReanim.TrackExists(theTrackName))
 	{

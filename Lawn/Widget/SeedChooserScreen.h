@@ -90,6 +90,7 @@ public:
     SeedType                mPreviousType;
 	Plant*                  mPlantPreview;
     SeedType                mPreviewSeed;
+    int                     mPreviewSkin;
 
     std::vector<SeedType> mOrderedSeeds;
     bool mOrderedSeedsDirty;

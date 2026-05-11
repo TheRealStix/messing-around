@@ -133,6 +133,7 @@ void Plant::PlantInitialize(int theGridX, int theGridY, SeedType theSeedType, Se
     mLaunchRate = aPlantDef.mLaunchRate;
     mSubclass = aPlantDef.mSubClass;
     mRenderOrder = CalcRenderOrder();
+	mSkinType = mApp->mPlayerInfo->mSeedsSkin[(int)theSeedType];
 
     Reanimation* aBodyReanim = nullptr;
     if (aPlantDef.mReanimationType != ReanimationType::REANIM_NONE)
@@ -457,7 +458,10 @@ void Plant::PlantInitialize(int theGridX, int theGridY, SeedType theSeedType, Se
         TOD_ASSERT(aBodyReanim);
         aBodyReanim->SetTruncateDisappearingFrames();
     }
-    
+    if (aBodyReanim)
+    {
+        ApplyPlantSkin(*aBodyReanim, mSkinType);
+    }
     if ((mApp->mGameMode == GameMode::GAMEMODE_CHALLENGE_BIG_TIME) &&
         (theSeedType == SeedType::SEED_WALLNUT || theSeedType == SeedType::SEED_SUNFLOWER || theSeedType == SeedType::SEED_MARIGOLD))
     {
@@ -5179,6 +5183,59 @@ void Plant::PlayIdleAnim(float theRate)
         if (mApp->IsIZombieLevel())
         {
             aBodyReanim->mAnimRate = 0.0f;
+        }
+    }
+}
+
+bool PlantHasSkin(SeedType theSeedType, int theSkinIndex)
+{
+    PlantDefinition& aPlantDef = GetPlantDefinition(theSeedType);
+
+    ReanimatorDefinition* aDef =
+        &gReanimatorDefArray[(int)aPlantDef.mReanimationType];
+
+    for (int i = 0; i < aDef->mTrackCount; i++)
+    {
+        const char* aName = aDef->mTracks[i].mName;
+
+        if (strncmp(aName, "skin_", 5) == 0)
+        {
+            if (sexyatoi(aName + 5) == theSkinIndex)
+                return true;
+        }
+    }
+
+    return false;
+}
+
+
+void Plant::ApplyPlantSkin(Reanimation& aReanim, int theSkin)
+{
+    for (int i = 0; i < aReanim.mDefinition->mTrackCount; i++)
+    {
+        ReanimatorTrack& aTrack = aReanim.mDefinition->mTracks[i];
+
+        aReanim.AssignRenderGroupToTrack(
+            aTrack.mName,
+            RENDER_GROUP_NORMAL
+        );
+    }
+
+    for (int i = 0; i < aReanim.mDefinition->mTrackCount; i++)
+    {
+        ReanimatorTrack& aTrack = aReanim.mDefinition->mTracks[i];
+
+        if (strncmp(aTrack.mName, "skin_", 5) == 0)
+        {
+            int aSkinIndex = sexyatoi(aTrack.mName + 5);
+
+            if (aSkinIndex != theSkin)
+            {
+                aReanim.AssignRenderGroupToTrack(
+                    aTrack.mName,
+                    RENDER_GROUP_HIDDEN
+                );
+            }
         }
     }
 }

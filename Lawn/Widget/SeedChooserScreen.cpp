@@ -46,6 +46,7 @@ SeedChooserScreen::SeedChooserScreen()
 	RebuildOrderedSeeds();
 	mPreviewSeed = mOrderedSeeds[0];
 	mPlantPreview = nullptr;
+	mPreviewSkin = mApp->mPlayerInfo->mSeedsSkin[(int)mPreviewSeed];
 
 	mStartButton = new GameButton(SeedChooserScreen::SeedChooserScreen_Start);
 	mStartButton->mLabel = _S("[LETS_ROCK_BUTTON]");
@@ -452,7 +453,6 @@ void SeedChooserScreen::Draw(Graphics* g)
 	{
 		float rechargeSeconds = aPlantDef.mRefreshTime / 100.0f;
 		SexyString value = fmod(rechargeSeconds, 1.0f) == 0.0f ? StrFormat(_S("%.0fs"), rechargeSeconds) : StrFormat(_S("%.1fs"), rechargeSeconds);
-
 		SexyString statsText = StrFormat(_S("{KEYWORD}{WAIT_TIME}:{STAT} %s"), value.c_str());
 		statsText = TodReplaceString(statsText, _S("{WAIT_TIME}"), _S("[WAIT_TIME]"));
 		TodDrawStringWrapped(g, statsText, infoRect, Sexy::FONT_BRIANNETOD12, Color(40, 50, 90), DS_ALIGN_LEFT);
@@ -461,8 +461,9 @@ void SeedChooserScreen::Draw(Graphics* g)
 		infoRect.mHeight -= spacing;
 	}
 
-	const char* suffix = mApp->mPlayerInfo->mShowStats ? "_ADVANCED" : "";
-	TodDrawStringWrapped(g, StrFormat(_S("[%s_TOOLTIP%s]"), aPlantDef.mPlantName, suffix), infoRect, Sexy::FONT_BRIANNETOD12, Color(40, 50, 90), DS_ALIGN_LEFT);
+	const char* desc = "[%s_TOOLTIP]";
+	if (mApp->mPlayerInfo->mShowStats) desc = "[%s_STATS_ADVANCED]";
+	TodDrawStringWrapped(g, StrFormat(_S(desc), aPlantDef.mPlantName), infoRect, Sexy::FONT_BRIANNETOD12, Color(40, 50, 90), DS_ALIGN_LEFT);
 	
 	mSlider->SliderDraw(g);
 	mFavButton->Draw(g);
@@ -1268,7 +1269,12 @@ void SeedChooserScreen::MouseUp(int x, int y, int theClickCount)
 			mFavButton->mButtonImage = !mApp->mPlayerInfo->mFavoriteSeeds[mPreviewSeed] ? Sexy::IMAGE_SEEDCHOOSER_BUTTON_FAV : Sexy::IMAGE_SEEDCHOOSER_BUTTON_FAV_ACTIVE;
 			mOrderedSeedsDirty = true;
 			ButtonDepress(SeedChooserScreen::SeedChooserScreen_Fav); }
-		else if (mSkinButton->IsMouseOver()) ButtonDepress(SeedChooserScreen::SeedChooserScreen_Skin);
+		else if (mSkinButton->IsMouseOver()) {
+			mApp->mPlayerInfo->SwitchSeedCostume(mPreviewSeed);
+			mPreviewSkin = mApp->mPlayerInfo->mSeedsSkin[(int)mPreviewSeed];
+			SetupPlantPreview();
+			ButtonDepress(SeedChooserScreen::SeedChooserScreen_Skin);
+		}
 		else if (mStatsButton->IsMouseOver()) { 
 			mApp->mPlayerInfo->ToggleStatsMode(); 
 			mStatsButton->mButtonImage = !mApp->mPlayerInfo->mShowStats ? Sexy::IMAGE_SEEDCHOOSER_BUTTON_STAT : Sexy::IMAGE_SEEDCHOOSER_BUTTON_STAT_ACTIVE; 
@@ -1498,7 +1504,9 @@ void SeedChooserScreen::SliderVal(int theId, double theVal)
 
 void SeedChooserScreen::SetupPlantPreview() {
 
-	if (mPlantPreview != nullptr && mPlantPreview->mSeedType == mPreviewSeed)
+	if (mPlantPreview != nullptr &&
+		mPlantPreview->mSeedType == mPreviewSeed &&
+		mPlantPreview->mSkinType == mPreviewSkin)
 		return;
 
 	float aPosX = 94;

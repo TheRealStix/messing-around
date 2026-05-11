@@ -188,7 +188,8 @@ public:
     bool                    mSquished;                      
     bool                    mIsAsleep;                      
     bool                    mIsOnBoard;                     
-    bool                    mHighlighted;                   
+    bool                    mHighlighted;
+    int                     mSkinType;
 
 public:
     Plant();
@@ -293,6 +294,7 @@ public:
     void                    GoldMagnetFindTargets();
     bool                    IsAGoldMagnetAboutToSuck();
     bool                    DrawMagnetItemsOnTop();
+    void                    ApplyPlantSkin(Reanimation& aBodyReanim, int theSkinType);
 };
 
 float                       PlantDrawHeightOffset(Board* theBoard, Plant* thePlant, SeedType theSeedType, int theCol, int theRow);
@@ -314,3 +316,4 @@ public:
 extern PlantDefinition gPlantDefs[SeedType::NUM_SEED_TYPES];
 
 /*inline*/ PlantDefinition& GetPlantDefinition(SeedType theSeedType);
+/*inline*/ bool PlantHasSkin(SeedType theSeedType, int theSkinIndex);

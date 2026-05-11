@@ -458,12 +458,18 @@ void AlmanacDialog::DrawPlants(Graphics* g)
 	mDescriptionRect.mY += textSpacing;
 	mDescriptionRect.mHeight -= textSpacing;
 
+
 	const char* suffix = mApp->mPlayerInfo->mShowStats ? "_ADVANCED" : "";
 	SexyString stats = TranslateAndSanitize(StrFormat(_S("[%s_STATS%s]"), aPlantDef.mPlantName, suffix));
 	SexyString description = TranslateAndSanitize(StrFormat(_S("[%s_DESCRIPTION]"), aPlantDef.mPlantName));
 	int statsSpacing = 0;
-	if (!stats.empty())
+	if (!stats.empty())	{
+		stats = _S("{SHORTLINE}\n") + stats;
 		statsSpacing = TodDrawStringWrappedHelper(g, stats, mDescriptionRect, descriptionFont, descriptionColor, descriptionJustification, false);
+	}
+	else{
+	description = _S("{SHORTLINE}\n") + description;
+	}
 	int descSpacing = TodDrawStringWrappedHelper(g, description, mDescriptionRect, descriptionFont, descriptionColor, descriptionJustification, false);
 	int totalSpacing = statsSpacing + descSpacing;
 
@@ -897,6 +903,10 @@ void AlmanacDialog::MouseUp(int x, int y, int theClickCount)
 	else if (mFavButton->IsMouseOver()) {
 		mApp->mPlayerInfo->ToggleFavoriteSeed(mSelectedSeed);
 		mFavButton->mButtonImage = !mApp->mPlayerInfo->mFavoriteSeeds[mSelectedSeed] ? Sexy::IMAGE_SEEDCHOOSER_BUTTON_FAV : Sexy::IMAGE_SEEDCHOOSER_BUTTON_FAV_ACTIVE;
+	}
+	else if(mSkinButton->IsMouseOver()){
+	mApp->mPlayerInfo->SwitchSeedCostume(mSelectedSeed);
+	SetupPlant();
 	}
 	else if (mStatsButton->IsMouseOver()){
 		mApp->mPlayerInfo->ToggleStatsMode(); 

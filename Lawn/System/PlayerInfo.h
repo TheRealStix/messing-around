@@ -76,6 +76,7 @@ public:
     bool                mShownedAchievements[20];
     bool                mShowStats;
 	bool				mFavoriteSeeds[NUM_SEEDS_IN_CHOOSER];
+    int				    mSeedsSkin[NUM_SEEDS_IN_CHOOSER];
 
 public:
     PlayerInfo();
@@ -90,6 +91,7 @@ public:
     /*inline*/ void     ResetChallengeRecord(GameMode theGameMode);
 	void				ToggleStatsMode();
     void				ToggleFavoriteSeed(int theIndex);
+    void				SwitchSeedCostume(SeedType theSeedType);
 };
 
 #endif

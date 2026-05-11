@@ -106,17 +106,11 @@ Peashooter
 [PEASHOOTER_TOOLTIP]
 Shoots peas at the enemy
 
-[PEASHOOTER_TOOLTIP_ADVANCED]
-{KEYWORD}Damage:{STAT} 20
-
 [SUNFLOWER]
 Sunflower
 
 [SUNFLOWER_TOOLTIP]
 Gives you additional sun
-
-[SUNFLOWER_TOOLTIP_ADVANCED]
-
 
 [CHERRY_BOMB]
 Cherry Bomb
@@ -124,15 +118,11 @@ Cherry Bomb
 [CHERRY_BOMB_TOOLTIP]
 Blows up all zombies in an area
 
-[CHERRY_BOMB_TOOLTIP_ADVANCED]
-
 [WALL_NUT]
 Wall-nut
 
 [WALL_NUT_TOOLTIP]
 Blocks off zombies and protects your other plants
-
-[WALL_NUT_TOOLTIP_ADVANCED]
 
 [REPEATER]
 Repeater
@@ -140,15 +130,11 @@ Repeater
 [REPEATER_TOOLTIP]
 Fires two peas at a time
 
-[REPEATER_TOOLTIP_ADVANCED]
-
 [POTATO_MINE]
 Potato Mine
 
 [POTATO_MINE_TOOLTIP]
 Explodes on contact, but takes time to arm itself
-
-[POTATO_MINE_TOOLTIP_ADVANCED]
 
 [SNOW_PEA]
 Snow Pea
@@ -156,15 +142,11 @@ Snow Pea
 [SNOW_PEA_TOOLTIP]
 Shoots frozen peas that damage and slow the enemy
 
-[SNOW_PEA_TOOLTIP_ADVANCED]
-
 [CHOMPER]
 Chomper
 
 [CHOMPER_TOOLTIP]
 Devours a zombie whole, but is vulnerable while chewing
-
-[CHOMPER_TOOLTIP_ADVANCED]
 
 [PUFF_SHROOM]
 Puff-shroom
@@ -172,15 +154,11 @@ Puff-shroom
 [PUFF_SHROOM_TOOLTIP]
 Shoots short-ranged spores at the enemy
 
-[PUFF_SHROOM_TOOLTIP_ADVANCED]
-
 [SUN_SHROOM]
 Sun-shroom
 
 [SUN_SHROOM_TOOLTIP]
 Gives small sun at first and normal sun later
-
-[SUN_SHROOM_TOOLTIP_ADVANCED]
 
 [FUME_SHROOM]
 Fume-shroom
@@ -188,7 +166,6 @@ Fume-shroom
 [FUME_SHROOM_TOOLTIP]
 Shoots fumes that can pass through screen doors
 
-[FUME_SHROOM_TOOLTIP_ADVANCED]
 
 [GRAVE_BUSTER]
 Grave Buster
@@ -196,16 +173,11 @@ Grave Buster
 [GRAVE_BUSTER_TOOLTIP]
 Plant it on a grave to remove the grave
 
-[GRAVE_BUSTER_TOOLTIP_ADVANCED]
-
-
 [HYPNO_SHROOM]
 Hypno-shroom
 
 [HYPNO_SHROOM_TOOLTIP]
 Makes a zombie fight for you
-
-[HYPNO_SHROOM_TOOLTIP_ADVANCED]
 
 [SCAREDY_SHROOM]
 Scaredy-shroom
@@ -213,15 +185,11 @@ Scaredy-shroom
 [SCAREDY_SHROOM_TOOLTIP]
 Long-ranged shooter that hides when enemies get near it
 
-[SCAREDY_SHROOM_TOOLTIP_ADVANCED]
-
 [ICE_SHROOM]
 Ice-shroom
 
 [ICE_SHROOM_TOOLTIP]
 Temporarily immobilizes all zombies on the screen
-
-[ICE_SHROOM_TOOLTIP_ADVANCED]
 
 [DOOM_SHROOM]
 Doom-shroom
@@ -229,15 +197,11 @@ Doom-shroom
 [DOOM_SHROOM_TOOLTIP]
 Destroys a large area, leaving a crater in its wake
 
-[DOOM_SHROOM_TOOLTIP_ADVANCED]
-
 [LILY_PAD]
 Lily Pad
 
 [LILY_PAD_TOOLTIP]
 Lets you plant non-aquatic plants on top of it
-
-[LILY_PAD_TOOLTIP_ADVANCED]
 
 [SQUASH]
 Squash
@@ -245,15 +209,11 @@ Squash
 [SQUASH_TOOLTIP]
 Squashes zombies
 
-[SQUASH_TOOLTIP_ADVANCED]
-
 [THREEPEATER]
 Threepeater
 
 [THREEPEATER_TOOLTIP]
 Shoots peas in three lanes
-
-[THREEPEATER_TOOLTIP_ADVANCED]
 
 [TANGLE_KELP]
 Tangle Kelp
@@ -261,15 +221,11 @@ Tangle Kelp
 [TANGLE_KELP_TOOLTIP]
 Aquatic plant that pulls a zombie underwater
 
-[TANGLE_KELP_TOOLTIP_ADVANCED]
-
 [JALAPENO]
 Jalapeno
 
 [JALAPENO_TOOLTIP]
 Destroys an entire lane of zombies
-
-[JALAPENO_TOOLTIP_ADVANCED]
 
 [SPIKEWEED]
 Spikeweed
@@ -277,15 +233,11 @@ Spikeweed
 [SPIKEWEED_TOOLTIP]
 Pops tires and hurts zombies that step on it
 
-[SPIKEWEED_TOOLTIP_ADVANCED]
-
 [TORCHWOOD]
 Torchwood
 
 [TORCHWOOD_TOOLTIP]
 Peas that pass through it turn into fireballs
-
-[TORCHWOOD_TOOLTIP_ADVANCED]
 
 [TALL_NUT]
 Tall-nut
@@ -293,15 +245,11 @@ Tall-nut
 [TALL_NUT_TOOLTIP]
 Heavy-duty wall that can't be vaulted over
 
-[TALL_NUT_TOOLTIP_ADVANCED]
-
 [SEA_SHROOM]
 Sea-shroom
 
 [SEA_SHROOM_TOOLTIP]
 Aquatic plant that shoots short-ranged spores
-
-[SEA_SHROOM_TOOLTIP_ADVANCED]
 
 [PLANTERN]
 Plantern
@@ -309,15 +257,11 @@ Plantern
 [PLANTERN_TOOLTIP]
 Lights up an area, letting you see through fog
 
-[PLANTERN_TOOLTIP_ADVANCED]
-
 [CACTUS]
 Cactus
 
 [CACTUS_TOOLTIP]
 Shoots spikes that can pop balloons
-
-[CACTUS_TOOLTIP_ADVANCED]
 
 [BLOVER]
 Blover
@@ -325,15 +269,11 @@ Blover
 [BLOVER_TOOLTIP]
 Blows away all balloon zombies and fog
 
-[BLOVER_TOOLTIP_ADVANCED]
-
 [SPLIT_PEA]
 Split Pea
 
 [SPLIT_PEA_TOOLTIP]
 Shoots peas forward and backwards
-
-[SPLIT_PEA_TOOLTIP_ADVANCED]
 
 [STARFRUIT]
 Starfruit
@@ -341,15 +281,11 @@ Starfruit
 [STARFRUIT_TOOLTIP]
 Shoots stars in 5 directions
 
-[STARFRUIT_TOOLTIP_ADVANCED]
-
 [PUMPKIN]
 Pumpkin
 
 [PUMPKIN_TOOLTIP]
 Protects plants that are within its shell
-
-[PUMPKIN_TOOLTIP_ADVANCED]
 
 [MAGNET_SHROOM]
 Magnet-shroom
@@ -357,15 +293,11 @@ Magnet-shroom
 [MAGNET_SHROOM_TOOLTIP]
 Removes helmets and other metal objects from zombies
 
-[MAGNET_SHROOM_TOOLTIP_ADVANCED]
-
 [CABBAGE_PULT]
 Cabbage-pult
 
 [CABBAGE_PULT_TOOLTIP]
 Hurls cabbages at the enemy
-
-[CABBAGE_PULT_TOOLTIP_ADVANCED]
 
 [FLOWER_POT]
 Flower Pot
@@ -373,15 +305,11 @@ Flower Pot
 [FLOWER_POT_TOOLTIP]
 Lets you plant on the roof
 
-[FLOWER_POT_TOOLTIP_ADVANCED]
-
 [KERNEL_PULT]
 Kernel-pult
 
 [KERNEL_PULT_TOOLTIP]
 Flings corn kernels and butter at zombies
-
-[KERNEL_PULT_TOOLTIP_ADVANCED]
 
 [GARLIC]
 Garlic
@@ -389,15 +317,11 @@ Garlic
 [GARLIC_TOOLTIP]
 Diverts zombies into other lanes
 
-[GARLIC_TOOLTIP_ADVANCED]
-
 [UMBRELLA_LEAF]
 Umbrella Leaf
 
 [UMBRELLA_LEAF_TOOLTIP]
 Protects nearby plants from bungees and catapults
-
-[UMBRELLA_LEAF_TOOLTIP_ADVANCED]
 
 [MARIGOLD]
 Marigold
@@ -405,15 +329,11 @@ Marigold
 [MARIGOLD_TOOLTIP]
 Gives you silver and gold coins
 
-[MARIGOLD_TOOLTIP_ADVANCED]
-
 [MELON_PULT]
 Melon-pult
 
 [MELON_PULT_TOOLTIP]
 Does heavy damage to groups of zombies
-
-[MELON_PULT_TOOLTIP_ADVANCED]
 
 [GATLING_PEA]
 Gatling Pea
@@ -422,16 +342,12 @@ Gatling Pea
 Shoots four peas at a time
 (requires repeater)
 
-[GATLING_PEA_TOOLTIP_ADVANCED]
-
 [TWIN_SUNFLOWER]
 Twin Sunflower
 
 [TWIN_SUNFLOWER_TOOLTIP]
 Gives twice as much sun as a sunflower
 (requires sunflower)
-
-[TWIN_SUNFLOWER_TOOLTIP_ADVANCED]
 
 [GLOOM_SHROOM]
 Gloom-shroom
@@ -440,16 +356,12 @@ Gloom-shroom
 Releases heavy fumes in an area around itself
 (requires fume-shroom)
 
-[GLOOM_SHROOM_TOOLTIP_ADVANCED]
-
 [CATTAIL]
 Cattail
 
 [CATTAIL_TOOLTIP]
 Attacks any lane and shoots down balloon zombies
 (requires lily pad)
-
-[CATTAIL_TOOLTIP_ADVANCED]
 
 [WINTER_MELON]
 Winter Melon
@@ -458,16 +370,12 @@ Winter Melon
 Does heavy damage and slows groups of zombies
 (requires melon-pult)
 
-[WINTER_MELON_TOOLTIP_ADVANCED]
-
 [GOLD_MAGNET]
 Gold Magnet
 
 [GOLD_MAGNET_TOOLTIP]
 Collects coins and diamonds for you
 (requires magnet-shroom)
-
-[GOLD_MAGNET_TOOLTIP_ADVANCED]
 
 [SPIKEROCK]
 Spikerock
@@ -476,8 +384,6 @@ Spikerock
 Pops multiple tires and damages zombies that walk over it
 (requires spikeweed)
 
-[SPIKEROCK_TOOLTIP_ADVANCED]
-
 [COB_CANNON]
 Cob Cannon
 
@@ -485,16 +391,11 @@ Cob Cannon
 Click to launch deadly cobs of corn
 (requires 2 kernel-pults)
 
-[COB_CANNON_TOOLTIP_ADVANCED]
-
 [IMITATER]
 Imitater
 
 [IMITATER_TOOLTIP]
 Lets you have two of the same plant
-
-[IMITATER_TOOLTIP_ADVANCED]
-{KEYWORD}Transformation Time:{STAT} 3s
 
 [COFFEE_BEAN]
 Coffee Bean
@@ -502,15 +403,11 @@ Coffee Bean
 [COFFEE_BEAN_TOOLTIP]
 Plant it on a mushroom to wake it up
 
-[COFFEE_BEAN_TOOLTIP_ADVANCED]
-
 [EXPLODE_O_NUT]
 Explode-o-nut
 
 [EXPLODE_O_NUT_TOOLTIP]
 Explodes on contact
-
-[EXPLODE_O_NUT_TOOLTIP_ADVANCED]
 
 [GIANT_WALLNUT]
 Giant Wall-nut
@@ -615,11 +512,9 @@ Propeller Zombie
 Peashooters are your first line of defense. They shoot peas at attacking zombies.
 
 [PEASHOOTER_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} normal
 
 [PEASHOOTER_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 20
 
 [PEASHOOTER_DESCRIPTION]
@@ -632,11 +527,9 @@ carbon dioxide make it all possible."
 Sunflowers are essential for you to produce extra sun. Try planting as many as you can!
 
 [SUNFLOWER_STATS]
-{SHORTLINE}
 {KEYWORD}Sun production:{STAT} normal
 
 [SUNFLOWER_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Sun Production:{STAT} 25
 {KEYWORD}Production Rate:{STAT} 25s
 
@@ -649,11 +542,9 @@ life-giving jazzy rhythm of the Earth itself, thumping at a frequency only Sunfl
 Wall-nuts have hard shells which you can use to protect your other plants.
 
 [WALL_NUT_STATS]
-{SHORTLINE}
 {KEYWORD}Toughness:{STAT} high
 
 [WALL_NUT_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Toughness:{STAT} 4000
 
 [WALL_NUT_DESCRIPTION]
@@ -665,12 +556,10 @@ Wall-nuts have hard shells which you can use to protect your other plants.
 Cherry Bombs can blow up all zombies in an area. They have a short fuse so plant them near zombies.
 
 [CHERRY_BOMB_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} massive
 {KEYWORD}Range:{STAT} all zombies in a medium area
 
 [CHERRY_BOMB_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 1800
 {KEYWORD}Range:{STAT} 3x3
 
@@ -684,12 +573,10 @@ his brother, Cherry #2. After intense consultation they agree to explodonate.
 Potato Mines pack a powerful punch, but they need a while to arm themselves. You should plant them ahead of zombies. They will explode on contact.
 
 [POTATO_MINE_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} massive
 {KEYWORD}Range:{STAT} all zombies in a small area
 
 [POTATO_MINE_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 1800
 {KEYWORD}Range:{STAT} tile
 {KEYWORD}Arming Time:{STAT} 15s
@@ -703,17 +590,15 @@ minute. Potato Mine says nothing. He's too busy thinking about his investment st
 [REPEATER_DESCRIPTION_HEADER]
 Repeaters fire two peas at a time.
 
-
 [REPEATER_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} normal (for each pea)
+{KEYWORD}Firing Speed:{STAT} 2x
 
 [REPEATER_STATS_ADVANCED]
-{SHORTLINE}
-{KEYWORD}Damage:{STAT} 20 (for each pea)
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Firing Speed:{STAT} 2x
 
 [REPEATER_DESCRIPTION]
-{KEYWORD}Firing Speed:{STAT} 2x
 {SHORTLINE}
 {FLAVOR}Repeater is fierce. He's from the streets. He doesn't take attitude from anybody, 
 plant or zombie, and he shoots peas to keep people at a distance. Secretly, though, Repeater yearns for love.
@@ -722,11 +607,9 @@ plant or zombie, and he shoots peas to keep people at a distance. Secretly, thou
 Snow Peas shoot frozen peas that damage and slow the enemy.
 
 [SNOW_PEA_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} normal, slows zombies
 
 [SNOW_PEA_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 20, slows zombies
 
 [SNOW_PEA_DESCRIPTION]
@@ -738,13 +621,11 @@ tell him to "stay frosty." Snow Pea just rolls his eyes. He's heard 'em all.
 Chompers can devour a zombie whole, but they are vulnerable while chewing.
 
 [CHOMPER_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} massive
 {KEYWORD}Range:{STAT} very short
 
 [CHOMPER_STATS_ADVANCED]
-{SHORTLINE}
-{KEYWORD}Damage:{STAT} 40
+{KEYWORD}Bite Damage:{STAT} 40
 {KEYWORD}Range:{STAT} 1 tile
 {KEYWORD}Chew Time:{STAT} 40s
 
@@ -759,12 +640,10 @@ though. He says it's just part of the business.
 Puff-shrooms are cheap, but can only fire a short distance.
 
 [PUFF_SHROOM_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} short
 
 [PUFF_SHROOM_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 20
 {KEYWORD}Range:{STAT} 3 tiles
 
@@ -778,11 +657,9 @@ I'd just assumed they were fairy tales or movie monsters. This whole experience 
 Sun-shrooms give small sun at first and normal sun later.
 
 [SUN_SHROOM_STATS]
-{SHORTLINE}
 {KEYWORD}Sun production:{STAT} low, then normal
 
 [SUN_SHROOM_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Sun production:{STAT} 15/25
 {KEYWORD}Sun production:{STAT} 25s
 {KEYWORD}Growth Speed:{STAT} 120s
@@ -797,13 +674,11 @@ he spits it out as fast as he can. He just won't abide it. To him, sun is crass.
 Fume-shrooms shoot fumes that can pass through screen doors.
 
 [FUME_SHROOM_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} normal, penetrates screen doors
 {KEYWORD}Range:{STAT} all zombies in the fume cloud
 
 [FUME_SHROOM_STATS_ADVANCED]
-{SHORTLINE}
-{KEYWORD}Damage:{STAT} 20, penetrates screen doors
+{KEYWORD}Damage:{STAT} 20
 {KEYWORD}Range:{STAT} 1x4
 
 [FUME_SHROOM_DESCRIPTION]
@@ -816,15 +691,12 @@ Fume-shrooms shoot fumes that can pass through screen doors.
 Plant Grave Busters on graves to remove the graves.
 
 [GRAVE_BUSTER_STATS]
-{SHORTLINE}
-{KEYWORD}Usage:{STAT} single use, must be planted on graves
 
 [GRAVE_BUSTER_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Busting Speed:{STAT} 4s
-{KEYWORD}Usage:{STAT} single use, must be planted on graves
 
 [GRAVE_BUSTER_DESCRIPTION]
+{KEYWORD}Usage:{STAT} single use, must be planted on graves
 {KEYWORD}Special:{STAT} removes graves
 {SHORTLINE}
 {FLAVOR}Despite Grave Buster's fearsome appearance, he wants everyone to know that he loves 
@@ -838,7 +710,6 @@ When eaten, Hypno-shrooms will make a zombie turn around and fight for you.
 [HYPNO_SHROOM_STATS_ADVANCED]
 
 [HYPNO_SHROOM_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Usage:{STAT} single use, on contact
 {KEYWORD}Special:{STAT} makes a zombie fight for you
 {NOCTURNAL}Sleeps during the day
@@ -850,11 +721,9 @@ who play a valuable role in our ecology. We can and should do more to bring them
 Scaredy-shrooms are long-ranged shooters that hide when enemies get near them.
 
 [SCAREDY_SHROOM_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} normal
 
 [SCAREDY_SHROOM_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 20
 {KEYWORD}Scared Range:{STAT} 3x3
 
@@ -868,12 +737,10 @@ Scaredy-shrooms are long-ranged shooters that hide when enemies get near them.
 Ice-shrooms temporarily immobilize all zombies on the screen.
 
 [ICE_SHROOM_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} very light, immobilizes zombies
 {KEYWORD}Range:{STAT} all zombies on the screen
 
 [ICE_SHROOM_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 10, immobilizes zombies
 {KEYWORD}Range:{STAT} full board
 
@@ -887,12 +754,10 @@ Ice-shrooms temporarily immobilize all zombies on the screen.
 Doom-shrooms destroy everything in a large area and leave a crater that can't be planted on.
 
 [DOOM_SHROOM_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} massive
 {KEYWORD}Range:{STAT} all zombies in a huge area
 
 [DOOM_SHROOM_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 1800
 {KEYWORD}Range:{STAT} 7x5
 
@@ -911,7 +776,6 @@ Lily pads let you plant non-aquatic plants on top of them.
 [LILY_PAD_STATS_ADVANCED]
 
 [LILY_PAD_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Special:{STAT} non-aquatic plants can be planted on top of it
 {AQUATIC}Must be planted in water
 {SHORTLINE}
@@ -922,12 +786,10 @@ he won't say a thing. Does he have startling opinions or shocking secrets? Nobod
 Squashes will smash the first zombie that gets close to it.
 
 [SQUASH_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} massive
 {KEYWORD}Range:{STAT} short range, hits all zombies that it lands on
 
 [SQUASH_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 1800
 {KEYWORD}Range:{STAT} 1 tile, hits all zombies that it lands on
 
@@ -940,15 +802,14 @@ Squashes will smash the first zombie that gets close to it.
 Threepeaters shoot peas in three lanes.
 
 [THREEPEATER_STATS]
-{SHORTLINE}
-{KEYWORD}Damage:{STAT} normaL (for each pea)
+{KEYWORD}Damage:{STAT} normal (for each pea)
+{KEYWORD}Range:{STAT} three lanes
 
 [THREEPEATER_STATS_ADVANCED]
-{SHORTLINE}
-{KEYWORD}Damage:{STAT} 20 (for each pea)
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Range:{STAT} three lanes
 
 [THREEPEATER_DESCRIPTION]
-{KEYWORD}Range:{STAT} three lanes
 {SHORTLINE}
 {FLAVOR}Threepeater likes reading, backgammon and long periods of immobility in the park. Threepeater enjoys 
 going to shows, particularly modern jazz. "I'm just looking for that special someone," he says. Threepeater's favorite number is 5.
@@ -957,12 +818,12 @@ going to shows, particularly modern jazz. "I'm just looking for that special som
 Tangle Kelp are aquatic plants that pull the first zombie that nears them underwater.
 
 [TANGLE_KELP_STATS]
+{KEYWORD}Damage:{STAT} massive
 
 [TANGLE_KELP_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} instant kill
 
 [TANGLE_KELP_DESCRIPTION]
-{SHORTLINE}
-{KEYWORD}Damage:{STAT} massive
 {KEYWORD}Usage:{STAT} single use, on contact
 {AQUATIC}Must be planted in water
 {SHORTLINE}
@@ -973,15 +834,14 @@ nobody will see me." His friends tell him they can see him perfectly well, but h
 Jalapenos destroy an entire lane of zombies.
 
 [JALAPENO_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} massive
+{KEYWORD}Range:{STAT} all zombies in a lane
 
 [JALAPENO_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 1800
+{KEYWORD}Range:{STAT} all zombies in a lane
 
 [JALAPENO_DESCRIPTION]
-{KEYWORD}Range:{STAT} all zombies in a lane
 {KEYWORD}Usage:{STAT} single use, instant
 {SHORTLINE}
 {FLAVOR}"NNNNNGGGGGG!!!!!!!!" Jalapeno says. He's not going to explode, not this time. But soon. Oh, so soon. 
@@ -991,12 +851,10 @@ It's close. He knows it, he can feel it, his whole life's been leading up to thi
 Spikeweeds pop tires and hurt any zombies that step on them.
 
 [SPIKEWEED_STATS]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} all zombies that walk over it
 
 [SPIKEWEED_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Damage:{STAT} 20
 {KEYWORD}Range:{STAT} tile
 
@@ -1014,7 +872,6 @@ Torchwoods turn peas that pass through them into fireballs that deal twice as mu
 [TORCHWOOD_STATS_ADVANCED]
 
 [TORCHWOOD_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Special:{STAT} doubles the damage of peas that pass through it.  Fireballs deal damage to nearby zombies on impact
 {SHORTLINE}
 {FLAVOR}Everybody likes and respects Torchwood. They like him for his integrity, for his steadfast friendship, 
@@ -1024,11 +881,9 @@ for his ability to greatly maximize pea damage. But Torchwood has a secret: he c
 Tall-nuts are heavy-duty wall plants that can't be vaulted over.
 
 [TALL_NUT_STATS]
-{SHORTLINE}
 {KEYWORD}Toughness:{STAT} very high
 
 [TALL_NUT_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Toughness:{STAT} 8000
 
 [TALL_NUT_DESCRIPTION]
@@ -1041,10 +896,15 @@ Tall-nut's voice trails off and he smiles knowingly.
 [SEA_SHROOM_DESCRIPTION_HEADER]
 Sea-shrooms are aquatic plants that shoot short ranged spores.
 
-[SEA_SHROOM_DESCRIPTION]
-{SHORTLINE}
+[SEA_SHROOM_STATS]
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} short
+
+[SEA_SHROOM_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Range:{STAT} 3 tiles
+
+[SEA_SHROOM_DESCRIPTION]
 {AQUATIC}Must be planted in water
 {NOCTURNAL}Sleeps during the day
 {SHORTLINE}
@@ -1053,9 +913,13 @@ Sea-shrooms are aquatic plants that shoot short ranged spores.
 [PLANTERN_DESCRIPTION_HEADER]
 Planterns light up an area, letting you see through fog.
 
-[PLANTERN_DESCRIPTION]
-{SHORTLINE}
+[PLANTERN_STATS]
 {KEYWORD}Range:{STAT} one lane
+
+[PLANTERN_STATS_ADVANCED]
+{KEYWORD}Range:{STAT} 5x7
+
+[PLANTERN_DESCRIPTION]
 {KEYWORD}Special:{STAT} lets you see through fog
 {SHORTLINE}
 {FLAVOR}Plantern defies science. He just does. Other plants eat light and excrete oxygen; Plantern eats 
@@ -1065,10 +929,15 @@ wouldn't use the term 'dark forces,' I just... I think I've said enough."
 [CACTUS_DESCRIPTION_HEADER]
 Cactuses shoot spikes that can hit both ground and air targets.
 
-[CACTUS_DESCRIPTION]
-{SHORTLINE}
+[CACTUS_STATS]
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} ground and air
+
+[CACTUS_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Range:{STAT} ground and air
+
+[CACTUS_DESCRIPTION]
 {SHORTLINE}
 {FLAVOR}She's prickly, sure, but Cactus's spikes belie a spongy heart filled with love and goodwill. 
 She just wants to hug and be hugged. Most folks can't hang with that, but Cactus doesn't mind. She's 
@@ -1077,8 +946,13 @@ been seeing an armadillo for a while and it really seems to be working out.
 [BLOVER_DESCRIPTION_HEADER]
 Blovers blow away all balloon zombies and fog.
 
+[BLOVER_STATS]
+
+[BLOVER_STATS_ADVANCED]
+{KEYWORD}Blow Time:{STAT} 2s
+{KEYWORD}Fog Clear Time:{STAT} 40s
+
 [BLOVER_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Usage:{STAT} single use, instant
 {KEYWORD}Special:{STAT} blows away all balloon zombies
 {SHORTLINE}
@@ -1089,11 +963,17 @@ defeat as a catalyst to push himself harder ever since.
 [SPLIT_PEA_DESCRIPTION_HEADER]
 Split Peas shoot peas forward and backwards.
 
-[SPLIT_PEA_DESCRIPTION]
-{SHORTLINE}
+[SPLIT_PEA_STATS]
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} forward and backwards
 {KEYWORD}Firing Speed:{STAT} 1x forward, 2x backwards
+
+[SPLIT_PEA_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Range:{STAT} front & back
+{KEYWORD}Firing Speed:{STAT} 1x/2x
+
+[SPLIT_PEA_DESCRIPTION]
 {SHORTLINE}
 {FLAVOR}"Yeah, I'm a Gemini," says Split Pea. "I know, big surprise. But having two heads --or really, 
 one head with a large head-like growth on the back-- pays off big in my line of work."
@@ -1101,10 +981,15 @@ one head with a large head-like growth on the back-- pays off big in my line of 
 [STARFRUIT_DESCRIPTION_HEADER]
 Starfruits shoot stars in 5 directions.
 
-[STARFRUIT_DESCRIPTION]
-{SHORTLINE}
+[STARFRUIT_STATS]
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} 5 directions
+
+[STARFRUIT_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Range:{STAT} 5 directions
+
+[STARFRUIT_DESCRIPTION]
 {SHORTLINE}
 {FLAVOR}"Aw, man," says Starfruit. "I went to the dentist the other day and he said I have four cavities. 
 I've got --count it-- ONE tooth! Four cavities in one tooth? How does this happen?"
@@ -1112,9 +997,13 @@ I've got --count it-- ONE tooth! Four cavities in one tooth? How does this happe
 [PUMPKIN_DESCRIPTION_HEADER]
 Pumpkins protect plants that are within their shells.
 
-[PUMPKIN_DESCRIPTION]
-{SHORTLINE}
+[PUMPKIN_STATS]
 {KEYWORD}Toughness:{STAT} high
+
+[PUMPKIN_STATS_ADVANCED]
+{KEYWORD}Toughness:{STAT} 4000
+
+[PUMPKIN_DESCRIPTION]
 {KEYWORD}Special:{STAT} can be planted over another plant
 {SHORTLINE}
 {FLAVOR}Pumpkin hasn't heard from his cousin Renfield lately. Apparently Renfield's a big star, some kind 
@@ -1123,9 +1012,13 @@ of... what was it... sports hero? Peggle Master? Pumpkin doesn't really get it. 
 [MAGNET_SHROOM_DESCRIPTION_HEADER]
 Magnet-shrooms remove helmets and other metal objects from zombies.
 
-[MAGNET_SHROOM_DESCRIPTION]
-{SHORTLINE}
+[MAGNET_SHROOM_STATS]
 {KEYWORD}Range:{STAT} nearby zombies
+
+[MAGNET_SHROOM_STATS_ADVANCED]
+{KEYWORD}Range:{STAT} 5x7
+
+[MAGNET_SHROOM_DESCRIPTION]
 {KEYWORD}Special:{STAT} removes metal objects from zombies
 {NOCTURNAL}Sleeps during the day
 {SHORTLINE}
@@ -1135,10 +1028,15 @@ not sure if he can handle that kind of responsibility.
 [CABBAGE_PULT_DESCRIPTION_HEADER]
 Cabbage-pults hurl cabbages at the enemy.
 
-[CABBAGE_PULT_DESCRIPTION]
-{SHORTLINE}
+[CABBAGE_PULT_STATS]
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} lobbed
+
+[CABBAGE_PULT_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 40
+{KEYWORD}Range:{STAT} lobbed
+
+[CABBAGE_PULT_DESCRIPTION]
 {SHORTLINE}
 {FLAVOR}Cabbage-pult is okay with launching cabbages at zombies. It's what he's paid for, after all, and 
 he's good at it. He just doesn't understand how the zombies get up on the roof in the first place.
@@ -1146,8 +1044,11 @@ he's good at it. He just doesn't understand how the zombies get up on the roof i
 [FLOWER_POT_DESCRIPTION_HEADER]
 Flower Pots let you plant on the roof.
 
+[FLOWER_POT_STATS]
+
+[FLOWER_POT_STATS_ADVANCED]
+
 [FLOWER_POT_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Special:{STAT} allows you to plant on the roof
 {SHORTLINE}
 {FLAVOR}"I'm a pot for planting. Yet I'm also a plant. HAS YOUR MIND EXPLODED YET?"
@@ -1155,10 +1056,16 @@ Flower Pots let you plant on the roof.
 [KERNEL_PULT_DESCRIPTION_HEADER]
 Kernel-pults fling corn kernels and butter at zombies.
 
-[KERNEL_PULT_DESCRIPTION]
-{SHORTLINE}
+[KERNEL_PULT_STATS]
 {KEYWORD}Damage:{STAT} light (kernel), normal (butter)
 {KEYWORD}Range:{STAT} lobbed
+
+[KERNEL_PULT_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20/40
+{KEYWORD}Butter Chance:{STAT} 25%
+{KEYWORD}Range:{STAT} lobbed
+
+[KERNEL_PULT_DESCRIPTION]
 {KEYWORD}Special:{STAT} butter immobilizes zombies
 {SHORTLINE}
 {FLAVOR}Kernel-Pult is the eldest of the Pult brothers. Of the three of them, Kernel is the only one 
@@ -1167,8 +1074,12 @@ who consistently remembers the others' birthdays. He bugs them about it a little
 [COFFEE_BEAN_DESCRIPTION_HEADER]
 Use Coffee Beans to wake up sleeping mushrooms.
 
+[COFFEE_BEAN_STATS]
+
+[COFFEE_BEAN_STATS_ADVANCED]
+{KEYWORD}Activation Time:{STAT} 2s
+
 [COFFEE_BEAN_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Usage:{STAT} single use, instant
 {KEYWORD}Special:{STAT} can be planted over another plant, wakes up mushrooms
 {SHORTLINE}
@@ -1178,8 +1089,12 @@ What thing? Whoa! Lions!" Yep, Coffee Bean sure does get excited.
 [GARLIC_DESCRIPTION_HEADER]
 Garlic diverts zombies into other lanes.
 
+[GARLIC_STATS]
+
+[GARLIC_STATS_ADVANCED]
+{KEYWORD}Toughness:{STAT} 400
+
 [GARLIC_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Usage:{STAT} on contact
 {KEYWORD}Special:{STAT} diverts zombies into other lanes
 {SHORTLINE}
@@ -1190,8 +1105,11 @@ He even pushes things into alternate avenues at home. Somehow his wife puts up w
 [UMBRELLA_LEAF_DESCRIPTION_HEADER]
 Umbrella Leaves protect nearby plants from bungees and catapults.
 
+[UMBRELLA_LEAF_STATS]
+
+[UMBRELLA_LEAF_STATS_ADVANCED]
+
 [UMBRELLA_LEAF_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Special:{STAT} protects adjacent plants from bungees and catapults
 {SHORTLINE}
 {FLAVOR}"SPROING!" says Umbrella Leaf. "Didja like that? I can do it again. SPROING! Woo! That's me 
@@ -1200,8 +1118,12 @@ popping up to protect stuff around me. Yeah. Just like that. EXACTLY like that. 
 [MARIGOLD_DESCRIPTION_HEADER]
 Marigolds give you silver and gold coins.
 
+[MARIGOLD_STATS]
+
+[MARIGOLD_STATS_ADVANCED]
+{KEYWORD}Production Rate:{STAT} 25s
+
 [MARIGOLD_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Special:{STAT} gives coins
 {SHORTLINE}
 {FLAVOR}Marigold spends a lot of time deciding whether to spit out a silver coin or a gold one. She 
@@ -1211,10 +1133,15 @@ That's how winners stay ahead.
 [MELON_PULT_DESCRIPTION_HEADER]
 Melon-pults do heavy damage to groups of zombies.
 
-[MELON_PULT_DESCRIPTION]
-{SHORTLINE}
+[MELON_PULT_STATS]
 {KEYWORD}Damage:{STAT} heavy
 {KEYWORD}Range:{STAT} lobbed
+
+[MELON_PULT_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 80
+{KEYWORD}Range:{STAT} lobbed
+
+[MELON_PULT_DESCRIPTION]
 {KEYWORD}Special:{STAT} melons damage nearby enemies on impact
 {SHORTLINE}
 {FLAVOR}There's no false modesty with Melon-pult. "Sun-for-damage, I deliver the biggest punch on 
@@ -1223,10 +1150,15 @@ the lawn," he says. "I'm not bragging. Run the numbers. You'll see."
 [GATLING_PEA_DESCRIPTION_HEADER]
 Gatling Peas shoot four peas at a time.
 
-[GATLING_PEA_DESCRIPTION]
-{SHORTLINE}
+[GATLING_PEA_STATS]
 {KEYWORD}Damage:{STAT} normal (for each pea)
 {KEYWORD}Firing Speed:{STAT} 4x
+
+[GATLING_PEA_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Firing Speed:{STAT} 4x
+
+[GATLING_PEA_DESCRIPTION]
 {KEYWORD}Must be planted on repeaters
 {SHORTLINE}
 {FLAVOR}Gatling Pea's parents were concerned when he announced his intention to join the military. 
@@ -1236,9 +1168,15 @@ he replied, eyes glinting with steely conviction.
 [TWIN_SUNFLOWER_DESCRIPTION_HEADER]
 Twin Sunflowers give twice as much sun as a normal sunflower.
 
-[TWIN_SUNFLOWER_DESCRIPTION]
-{SHORTLINE}
+[TWIN_SUNFLOWER_STATS]
 {KEYWORD}Sun production:{STAT} double
+
+[TWIN_SUNFLOWER_STATS_ADVANCED]
+{KEYWORD}Sun Production:{STAT} 25
+{KEYWORD}Production Speed:{STAT} 2x
+{KEYWORD}Production Rate:{STAT} 25s
+
+[TWIN_SUNFLOWER_DESCRIPTION]
 {KEYWORD}Must be planted on sunflowers
 {SHORTLINE}
 {FLAVOR}It was a crazed night of forbidden science that brought Twin Sunflower into existence. Thunder 
@@ -1248,8 +1186,14 @@ But to no avail. Twin Sunflower was alive, ALIVE!
 [GLOOM_SHROOM_DESCRIPTION_HEADER]
 Gloom-shrooms release heavy fumes in an area around themselves.
 
+[GLOOM_SHROOM_STATS]
+
+[GLOOM_SHROOM_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Range:{STAT} 3x3
+{KEYWORD}Firing speed:{STAT} 4x
+
 [GLOOM_SHROOM_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Must be planted on fume-shrooms
 {SHORTLINE}
 {FLAVOR}"I've always enjoyed releasing heavy fumes," says Gloom Shroom. "I know a lot of people aren't 
@@ -1259,8 +1203,14 @@ brain eaten by zombies?"
 [CATTAIL_DESCRIPTION_HEADER]
 Cattails can attack any lane and shoot down balloon zombies too.
 
+[CATTAIL_STATS]
+
+[CATTAIL_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Range:{STAT} full board
+{KEYWORD}Firing Speed:{STAT} 2x
+
 [CATTAIL_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Must be planted on lily pads
 {SHORTLINE}
 {FLAVOR}"Woof!" says Cattail. "Woof woof woof! Does this confuse you? Do you expect me to say 'Meow' 
@@ -1270,11 +1220,17 @@ work around here. I refuse to be pigeonholed."
 [WINTER_MELON_DESCRIPTION_HEADER]
 Winter Melons do heavy damage and slow groups of zombies.
 
-[WINTER_MELON_DESCRIPTION]
-{SHORTLINE}
+[WINTER_MELON_STATS]
 {KEYWORD}Damage:{STAT} very heavy
 {KEYWORD}Range:{STAT} lobbed
 {KEYWORD}Firing Speed:{STAT} 1/2x
+
+[WINTER_MELON_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 80
+{KEYWORD}Range:{STAT} lobbed
+{KEYWORD}Firing Speed:{STAT} 1/2x
+
+[WINTER_MELON_DESCRIPTION]
 {KEYWORD}Special:{STAT} melons damage and freeze nearby enemies on impact
 {KEYWORD}Must be planted on melon-pults
 {SHORTLINE}
@@ -1283,8 +1239,12 @@ Winter Melons do heavy damage and slow groups of zombies.
 [GOLD_MAGNET_DESCRIPTION_HEADER]
 Gold Magnets collect coins and diamonds for you.
 
+[GOLD_MAGNET_STATS]
+
+[GOLD_MAGNET_STATS_ADVANCED]
+{KEYWORD}Range:{STAT} full board
+
 [GOLD_MAGNET_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Must be planted on magnet-shrooms
 {SHORTLINE}
 {FLAVOR}"How did I end up here?" asks Gold Magnet. "I was on the fast track --corner office, full 
@@ -1294,8 +1254,14 @@ lawn, in serious danger of being eaten to death. Ooh! A coin!"
 [COB_CANNON_DESCRIPTION_HEADER]
 Click on the Cob Cannon to launch deadly cobs of corn.
 
+[COB_CANNON_STATS]
+
+[COB_CANNON_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 1800
+{KEYWORD}Range:{STAT} full board
+{KEYWORD}Arming Time:{STAT} 30s
+
 [COB_CANNON_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Must be planted on 2 side-by-side kernel-pults
 {SHORTLINE}
 {FLAVOR}What's the deal with Cob Cannon, anyway?  He went to Harvard. He practices law in a prestigious 
@@ -1308,19 +1274,23 @@ Imitaters let you use two of the same plant during a level!
 [IMITATER_STATS]
 
 [IMITATER_STATS_ADVANCED]
-{SHORTLINE}
 {KEYWORD}Transformation Time:{STAT} 3s
 
 [IMITATER_DESCRIPTION]
-{SHORTLINE}
 {FLAVOR}"I remember the Zombie Wars back in '76," says Imitater in a raspy, old-man's voice. "Back then, 
 we didn't have all these fancy peashooters and jalapenos. All we had was guts. Guts and a spoon."
 
 [SPIKEROCK_DESCRIPTION_HEADER]
 Spikerocks pop multiple tires and damage zombies that walk over it.
 
+[SPIKEROCK_STATS]
+
+[SPIKEROCK_STATS_ADVANCED]
+{KEYWORD}Damage:{STAT} 20
+{KEYWORD}Attack speed:{STAT} 2x
+{KEYWORD}Range:{STAT} tile
+
 [SPIKEROCK_DESCRIPTION]
-{SHORTLINE}
 {KEYWORD}Must be planted on spikeweeds
 {SHORTLINE}
 {FLAVOR}Spikerock just got back from a trip to Europe. He had a great time, met some wonderful people, 
