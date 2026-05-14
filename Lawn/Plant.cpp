@@ -204,18 +204,16 @@ void Plant::PlantInitialize(int theGridX, int theGridY, SeedType theSeedType, Se
 
             Reanimation* aHeadReanim = mApp->AddReanimation(0.0f, 0.0f, mRenderOrder + 2, aPlantDef.mReanimationType);
             ApplyPlantSkin(*aHeadReanim, mSkinType);
-            const char* aStemTrack = GetActiveStemTrack(aBodyReanim);
-            const char* aIdleTrack = "anim_idle";
             aHeadReanim->mLoopType = ReanimLoopType::REANIM_LOOP;
             aHeadReanim->mAnimRate = aBodyReanim->mAnimRate;
             aHeadReanim->SetFramesForLayer("anim_head_idle");
 
             mHeadReanimID = mApp->ReanimationGetID(aHeadReanim);
 
-            if (aBodyReanim->TrackExists(aStemTrack))
-                aHeadReanim->AttachToAnotherReanimation(aBodyReanim, aStemTrack);
-            else if (aBodyReanim->TrackExists(aIdleTrack))
-                aHeadReanim->AttachToAnotherReanimation(aBodyReanim, aIdleTrack);
+            if (aBodyReanim->TrackExists(GetSkinAnimTrack(aBodyReanim, "anim_stem")))
+                aHeadReanim->AttachToAnotherReanimation(aBodyReanim, GetSkinAnimTrack(aBodyReanim, "anim_stem"));
+            else if (aBodyReanim->TrackExists(GetSkinAnimTrack(aBodyReanim, "anim_idle")))
+                aHeadReanim->AttachToAnotherReanimation(aBodyReanim, GetSkinAnimTrack(aBodyReanim, "anim_idle"));
         }
         break;
     case SeedType::SEED_SPLITPEA:
@@ -223,20 +221,20 @@ void Plant::PlantInitialize(int theGridX, int theGridY, SeedType theSeedType, Se
         TOD_ASSERT(aBodyReanim);
 
         aBodyReanim->mAnimRate = RandRangeFloat(15.0f, 20.0f);
-        const char* aStemTrack = GetActiveStemTrack(aBodyReanim);
 
         Reanimation* aHeadReanim1 = mApp->AddReanimation(0.0f, 0.0f, mRenderOrder + 2, aPlantDef.mReanimationType);
+
         aHeadReanim1->mLoopType = ReanimLoopType::REANIM_LOOP;
         aHeadReanim1->mAnimRate = aBodyReanim->mAnimRate;
         aHeadReanim1->SetFramesForLayer("anim_head_idle");
-        aHeadReanim1->AttachToAnotherReanimation(aBodyReanim, aStemTrack);
+        aHeadReanim1->AttachToAnotherReanimation(aBodyReanim, GetSkinAnimTrack(aBodyReanim, "anim_idle"));
         mHeadReanimID = mApp->ReanimationGetID(aHeadReanim1);
 
         Reanimation* aHeadReanim2 = mApp->AddReanimation(0.0f, 0.0f, mRenderOrder + 2, aPlantDef.mReanimationType);
         aHeadReanim2->mLoopType = ReanimLoopType::REANIM_LOOP;
         aHeadReanim2->mAnimRate = aBodyReanim->mAnimRate;
         aHeadReanim2->SetFramesForLayer("anim_splitpea_idle");
-        aHeadReanim2->AttachToAnotherReanimation(aBodyReanim, aStemTrack);
+        aHeadReanim2->AttachToAnotherReanimation(aBodyReanim, GetSkinAnimTrack(aBodyReanim, "anim_idle"));
         mHeadReanimID2 = mApp->ReanimationGetID(aHeadReanim2);
 
         break;
@@ -246,27 +244,26 @@ void Plant::PlantInitialize(int theGridX, int theGridY, SeedType theSeedType, Se
         TOD_ASSERT(aBodyReanim);
 
         aBodyReanim->mAnimRate = RandRangeFloat(15.0f, 20.0f);
-        const char* aStemTrack = GetActiveStemTrack(aBodyReanim);
 
         Reanimation* aHeadReanim1 = mApp->AddReanimation(0.0f, 0.0f, mRenderOrder + 2, aPlantDef.mReanimationType);
         aHeadReanim1->mLoopType = ReanimLoopType::REANIM_LOOP;
         aHeadReanim1->mAnimRate = aBodyReanim->mAnimRate;
         aHeadReanim1->SetFramesForLayer("anim_head_idle1");
-        aHeadReanim1->AttachToAnotherReanimation(aBodyReanim, aStemTrack);
+        aHeadReanim1->AttachToAnotherReanimation(aBodyReanim, GetSkinAnimTrack(aBodyReanim, "anim_head1"));
         mHeadReanimID = mApp->ReanimationGetID(aHeadReanim1);
 
         Reanimation* aHeadReanim2 = mApp->AddReanimation(0.0f, 0.0f, mRenderOrder + 2, aPlantDef.mReanimationType);
         aHeadReanim2->mLoopType = ReanimLoopType::REANIM_LOOP;
         aHeadReanim2->mAnimRate = aBodyReanim->mAnimRate;
         aHeadReanim2->SetFramesForLayer("anim_head_idle2");
-        aHeadReanim2->AttachToAnotherReanimation(aBodyReanim, aStemTrack);
+        aHeadReanim2->AttachToAnotherReanimation(aBodyReanim, GetSkinAnimTrack(aBodyReanim, "anim_head2"));
         mHeadReanimID2 = mApp->ReanimationGetID(aHeadReanim2);
 
         Reanimation* aHeadReanim3 = mApp->AddReanimation(0.0f, 0.0f, mRenderOrder + 2, aPlantDef.mReanimationType);
         aHeadReanim3->mLoopType = ReanimLoopType::REANIM_LOOP;
         aHeadReanim3->mAnimRate = aBodyReanim->mAnimRate;
         aHeadReanim3->SetFramesForLayer("anim_head_idle3");
-        aHeadReanim3->AttachToAnotherReanimation(aBodyReanim, aStemTrack);
+        aHeadReanim3->AttachToAnotherReanimation(aBodyReanim, GetSkinAnimTrack(aBodyReanim, "anim_head3"));
         mHeadReanimID3 = mApp->ReanimationGetID(aHeadReanim3);
 
         break;
@@ -2874,20 +2871,20 @@ Reanimation* Plant::AttachBlinkAnim(Reanimation* theReanimBody)
     const PlantDefinition& aPlantDef = GetPlantDefinition(mSeedType);
     LawnApp* aApp = (LawnApp*)gSexyAppBase;
     Reanimation* aAnimToAttach = theReanimBody;
-    const char* aTrackToPlay = GetBlinkTrack(theReanimBody);
+    const char* aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink");
     const char* aTrackToAttach = nullptr;
-
+	TodTrace("Attaching blink anim %s", aTrackToPlay);
     if (mSeedType == SeedType::SEED_WALLNUT || mSeedType == SeedType::SEED_TALLNUT || 
         mSeedType == SeedType::SEED_EXPLODE_O_NUT || mSeedType == SeedType::SEED_GIANT_WALLNUT)
     {
         int aHit = Rand(10);
         if (aHit < 1 && theReanimBody->TrackExists("anim_blink_twitch"))
         {
-            aTrackToPlay = "anim_blink_twitch";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink_twitch");
         }
         else
         {
-            aTrackToPlay = aHit < 7 ? "anim_blink_twice" : "anim_blink_thrice";
+            aTrackToPlay = aHit < 7 ? GetSkinAnimTrack(theReanimBody, "anim_blink_twice") : GetSkinAnimTrack(theReanimBody, "anim_blink_thrice");
         }
     }
     else if (mSeedType == SeedType::SEED_THREEPEATER)
@@ -2895,22 +2892,22 @@ Reanimation* Plant::AttachBlinkAnim(Reanimation* theReanimBody)
         int aHit = Rand(3);
         if (aHit == 0)
         {
-            aTrackToPlay = "anim_blink1";
-            aTrackToAttach = "anim_face1";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink1");
+            aTrackToAttach = GetSkinAnimTrack(theReanimBody, "anim_face1");
             ReanimatorTrackInstance* aTrackInstance = theReanimBody->GetTrackInstanceByName("anim_head1");
             aAnimToAttach = FindReanimAttachment(aTrackInstance->mAttachmentID);
         }
         else if (aHit == 1)
         {
-            aTrackToPlay = "anim_blink2";
-            aTrackToAttach = "anim_face2";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink2");
+            aTrackToAttach = GetSkinAnimTrack(theReanimBody, "anim_face2");
             ReanimatorTrackInstance* aTrackInstance = theReanimBody->GetTrackInstanceByName("anim_head2");
             aAnimToAttach = FindReanimAttachment(aTrackInstance->mAttachmentID);
         }
         else
         {
-            aTrackToPlay = "anim_blink3";
-            aTrackToAttach = "anim_face3";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink3");
+            aTrackToAttach = GetSkinAnimTrack(theReanimBody, "anim_face3");
             ReanimatorTrackInstance* aTrackInstance = theReanimBody->GetTrackInstanceByName("anim_head3");
             aAnimToAttach = FindReanimAttachment(aTrackInstance->mAttachmentID);
         }
@@ -2919,14 +2916,14 @@ Reanimation* Plant::AttachBlinkAnim(Reanimation* theReanimBody)
     {
         if (Rand(2) == 0)
         {
-            aTrackToPlay = "anim_blink";
-            aTrackToAttach = "anim_face";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink");
+            aTrackToAttach = GetSkinAnimTrack(theReanimBody, "anim_face");
             aAnimToAttach = mApp->ReanimationTryToGet(mHeadReanimID);
         }
         else
         {
-            aTrackToPlay = "anim_blink2";
-            aTrackToAttach = "anim_face2";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink2");
+            aTrackToAttach = GetSkinAnimTrack(theReanimBody, "anim_face2");
             aAnimToAttach = mApp->ReanimationTryToGet(mHeadReanimID2);
         }
     }
@@ -2934,25 +2931,25 @@ Reanimation* Plant::AttachBlinkAnim(Reanimation* theReanimBody)
     {
         if (Rand(2) == 0)
         {
-            aTrackToPlay = "anim_blink";
-            aTrackToAttach = "anim_face";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink");
+            aTrackToAttach = GetSkinAnimTrack(theReanimBody, "anim_face");
         }
         else
         {
-            aTrackToPlay = "anim_blink2";
-            aTrackToAttach = "anim_face2";
+            aTrackToPlay = GetSkinAnimTrack(theReanimBody, "anim_blink2");
+            aTrackToAttach = GetSkinAnimTrack(theReanimBody, "anim_face2");
         }
     }
     else if (mSeedType == SeedType::SEED_PEASHOOTER || mSeedType == SeedType::SEED_SNOWPEA || mSeedType == SeedType::SEED_REPEATER || mSeedType == SeedType::SEED_LEFTPEATER || mSeedType == SeedType::SEED_GATLINGPEA)
     {
-        if (theReanimBody->TrackExists("anim_stem"))
+        if (theReanimBody->TrackExists(GetSkinAnimTrack(theReanimBody, "anim_stem")))
         {
-            ReanimatorTrackInstance* aTrackInstance = theReanimBody->GetTrackInstanceByName("anim_stem");
+            ReanimatorTrackInstance* aTrackInstance = theReanimBody->GetTrackInstanceByName(GetSkinAnimTrack(theReanimBody, "anim_stem"));
             aAnimToAttach = FindReanimAttachment(aTrackInstance->mAttachmentID);
         }
-        else if (theReanimBody->TrackExists("anim_idle"))
+        else if (theReanimBody->TrackExists(GetSkinAnimTrack(theReanimBody, "anim_idle")))
         {
-            ReanimatorTrackInstance* aTrackInstance = theReanimBody->GetTrackInstanceByName("anim_idle");
+            ReanimatorTrackInstance* aTrackInstance = theReanimBody->GetTrackInstanceByName(GetSkinAnimTrack(theReanimBody, "anim_idle"));
             aAnimToAttach = FindReanimAttachment(aTrackInstance->mAttachmentID);
         }
     }
@@ -2968,6 +2965,7 @@ Reanimation* Plant::AttachBlinkAnim(Reanimation* theReanimBody)
 
     Reanimation* aBlinkReanim = aApp->mEffectSystem->mReanimationHolder->AllocReanimation(0.0f, 0.0f, 0, aPlantDef.mReanimationType);
     ApplyPlantSkin(*aBlinkReanim, mSkinType);
+	TodTrace("Playing blink anim %s", aTrackToPlay);
     aBlinkReanim->SetFramesForLayer(aTrackToPlay);
     aBlinkReanim->mLoopType = ReanimLoopType::REANIM_PLAY_ONCE_FULL_LAST_FRAME_AND_HOLD;
     aBlinkReanim->mAnimRate = 15.0f;
@@ -2977,13 +2975,13 @@ Reanimation* Plant::AttachBlinkAnim(Reanimation* theReanimBody)
     {
         aBlinkReanim->AttachToAnotherReanimation(aAnimToAttach, aTrackToAttach);
     }
-    else if (aAnimToAttach->TrackExists("anim_face"))
+    else if (aAnimToAttach->TrackExists(GetSkinAnimTrack(theReanimBody, "anim_face")))
     {
-        aBlinkReanim->AttachToAnotherReanimation(aAnimToAttach, "anim_face");
+        aBlinkReanim->AttachToAnotherReanimation(aAnimToAttach, GetSkinAnimTrack(theReanimBody, "anim_face"));
     }
-    else if (aAnimToAttach->TrackExists("anim_idle"))
+    else if (aAnimToAttach->TrackExists(GetSkinAnimTrack(theReanimBody, "anim_idle")))
     {
-        aBlinkReanim->AttachToAnotherReanimation(aAnimToAttach, "anim_idle");
+        aBlinkReanim->AttachToAnotherReanimation(aAnimToAttach, GetSkinAnimTrack(theReanimBody, "anim_idle"));
     }
     else
     {
@@ -3010,6 +3008,7 @@ void Plant::DoBlink()
 
     EndBlink();
     Reanimation* aBodyReanim = mApp->ReanimationTryToGet(mBodyReanimID);
+	ApplyPlantSkin(*aBodyReanim, mSkinType);
     if (aBodyReanim == nullptr)
         return;
 
@@ -5249,60 +5248,21 @@ void Plant::ApplyPlantSkin(Reanimation& aReanim, int theSkin)
     }
 }
 
-const char* Plant::GetSkinTrackName(Reanimation& aReanim,const char* theBaseTrack)
+const char* Plant::GetSkinAnimTrack(Reanimation* aBodyReanim, const char* theBaseTrack)
 {
-    static char aTrackName[128];
+    static char aBufPool[8][64];
+    static int idx = 0;
+
+    char* buf = aBufPool[idx];
+    idx = (idx + 1) % 8;
 
     if (mSkinType > 0)
     {
-        sprintf(
-            aTrackName,
-            "skin_%d_%s",
-            mSkinType,
-            theBaseTrack
-        );
+        snprintf(buf, 64, "skin_%d_%s", mSkinType, theBaseTrack);
 
-        if (aReanim.TrackExists(aTrackName))
-            return aTrackName;
+        if (aBodyReanim->TrackExists(buf))
+            return buf;
     }
 
     return theBaseTrack;
-}
-
-const char* Plant::GetActiveStemTrack(Reanimation* aBodyReanim)
-{
-    static char aBuf[64];
-
-    if (mSkinType > 0)
-    {
-        sprintf(aBuf, "skin_%d_anim_stem", mSkinType);
-
-        if (aBodyReanim->TrackExists(aBuf))
-            return aBuf;
-    }
-
-    return "anim_stem";
-}
-
-const char* Plant::GetBlinkTrack(Reanimation* aBodyReanim)
-{
-    static char aBuf[64];
-
-    if (mSkinType > 0)
-    {
-        sprintf(aBuf, "skin_%d_anim_blink", mSkinType);
-
-        if (aBodyReanim->TrackExists(aBuf))
-            return aBuf;
-
-        sprintf(aBuf, "skin_%d_anim_blink2", mSkinType);
-        if (aBodyReanim->TrackExists(aBuf))
-            return aBuf;
-
-        sprintf(aBuf, "skin_%d_anim_blink3", mSkinType);
-        if (aBodyReanim->TrackExists(aBuf))
-            return aBuf;
-    }
-
-    return "anim_blink";
 }
