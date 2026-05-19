@@ -185,7 +185,15 @@ void SeedPacket::Update()
 
 void SeedPacketDrawSeed(Graphics* g, float x, float y, SeedType theSeedType, SeedType theImitaterType, float theOffsetX, float theOffsetY, float theScale)
 {
-	Image* aImage = IMAGE_PACKET_PLANTS;
+	bool isHD = g->mScaleX > 1.0f;
+	Image* aImage = isHD ? IMAGE_HD_PACKET_PLANTS : IMAGE_PACKET_PLANTS;
+	float aDrawScaleX = g->mScaleX;
+	float aDrawScaleY = g->mScaleY;
+	if (isHD)
+	{
+		aDrawScaleX *= 0.5f;
+		aDrawScaleY *= 0.5f;
+	}
 	SeedType aSeedType = theSeedType;
 	if (theSeedType == SeedType::SEED_IMITATER && theImitaterType != SeedType::SEED_NONE)
 	{
@@ -197,10 +205,17 @@ void SeedPacketDrawSeed(Graphics* g, float x, float y, SeedType theSeedType, See
 		aImage = FilterEffectGetImage(aImage, aFilterEffect);
 	}
 
-	for (int i = 0; i < NUM_SEED_TYPES-5; i++) {
+	for (int i = 0; i < SEED_GATLINGPEA; i++) {
+		if (aSeedType == i)
+		{
+			TodDrawImageCelScaledF(g, aImage, x, y, i, 0, aDrawScaleX, aDrawScaleY);
+		}
+	}
+
+	for (int i = SEED_GATLINGPEA; i < NUM_SEED_TYPES-5; i++) {
 		if (aSeedType == i && g->mScaleX <= 1.0f)
 		{
-			TodDrawImageCelScaledF(g, aImage, x, y, i, 0, g->mScaleX, g->mScaleY);
+			TodDrawImageCelScaledF(g, IMAGE_UPGRADE_PACKET_PLANTS, x, y, i- SEED_GATLINGPEA, 0, g->mScaleX, g->mScaleY);
 		}
 	}
 
