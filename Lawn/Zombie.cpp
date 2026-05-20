@@ -642,6 +642,7 @@ void Zombie::ZombieInitialize(int theRow, ZombieType theType, bool theVariant, Z
         ReanimatorTrackInstance* aTrackInstance = aBodyReanim->GetTrackInstanceByName("anim_head1");
         aTrackInstance->mImageOverride = IMAGE_BLANK;
         Reanimation* aHeadReanim = mApp->AddReanimation(0.0f, 0.0f, 0, ReanimationType::REANIM_PEASHOOTER);
+        GetZombotanyHeadReanim(*aHeadReanim);
         aHeadReanim->PlayReanim("anim_head_idle", ReanimLoopType::REANIM_LOOP, 0, 15.0f);
         mSpecialHeadReanimID = mApp->ReanimationGetID(aHeadReanim);
         AttachEffect* aAttachEffect = AttachReanim(aTrackInstance->mAttachmentID, aHeadReanim, 0.0f, 0.0f);
@@ -663,6 +664,7 @@ void Zombie::ZombieInitialize(int theRow, ZombieType theType, bool theVariant, Z
         Reanimation* aBodyReanim = mApp->ReanimationGet(mBodyReanimID);
         ReanimatorTrackInstance* aTrackInstance = aBodyReanim->GetTrackInstanceByName("Zombie_body");
         Reanimation* aHeadReanim = mApp->AddReanimation(0.0f, 0.0f, 0, ReanimationType::REANIM_WALLNUT);
+        GetZombotanyHeadReanim(*aHeadReanim);
         aHeadReanim->PlayReanim("anim_idle", ReanimLoopType::REANIM_LOOP, 0, 15.0f);
         mSpecialHeadReanimID = mApp->ReanimationGetID(aHeadReanim);
         AttachEffect* aAttachEffect = AttachReanim(aTrackInstance->mAttachmentID, aHeadReanim, 0.0f, 0.0f);
@@ -685,6 +687,7 @@ void Zombie::ZombieInitialize(int theRow, ZombieType theType, bool theVariant, Z
         Reanimation* aBodyReanim = mApp->ReanimationGet(mBodyReanimID);
         ReanimatorTrackInstance* aTrackInstance = aBodyReanim->GetTrackInstanceByName("Zombie_body");
         Reanimation* aHeadReanim = mApp->AddReanimation(0.0f, 0.0f, 0, ReanimationType::REANIM_TALLNUT);
+        GetZombotanyHeadReanim(*aHeadReanim);
         aHeadReanim->PlayReanim("anim_idle", ReanimLoopType::REANIM_LOOP, 0, 15.0f);
         mSpecialHeadReanimID = mApp->ReanimationGetID(aHeadReanim);
         AttachEffect* aAttachEffect = AttachReanim(aTrackInstance->mAttachmentID, aHeadReanim, 0.0f, 0.0f);
@@ -708,6 +711,7 @@ void Zombie::ZombieInitialize(int theRow, ZombieType theType, bool theVariant, Z
         Reanimation* aBodyReanim = mApp->ReanimationGet(mBodyReanimID);
         ReanimatorTrackInstance* aTrackInstance = aBodyReanim->GetTrackInstanceByName("Zombie_body");
         Reanimation* aHeadReanim = mApp->AddReanimation(0.0f, 0.0f, 0, ReanimationType::REANIM_JALAPENO);
+        GetZombotanyHeadReanim(*aHeadReanim);
         aHeadReanim->PlayReanim("anim_idle", ReanimLoopType::REANIM_LOOP, 0, 15.0f);
         mSpecialHeadReanimID = mApp->ReanimationGetID(aHeadReanim);
         AttachEffect* aAttachEffect = AttachReanim(aTrackInstance->mAttachmentID, aHeadReanim, 0.0f, 0.0f);
@@ -736,6 +740,7 @@ void Zombie::ZombieInitialize(int theRow, ZombieType theType, bool theVariant, Z
         ReanimatorTrackInstance* aTrackInstance = aBodyReanim->GetTrackInstanceByName("anim_head1");
         aTrackInstance->mImageOverride = IMAGE_BLANK;
         Reanimation* aHeadReanim = mApp->AddReanimation(0.0f, 0.0f, 0, ReanimationType::REANIM_GATLINGPEA);
+        GetZombotanyHeadReanim(*aHeadReanim);
         aHeadReanim->PlayReanim("anim_head_idle", ReanimLoopType::REANIM_LOOP, 0, 15.0f);
         mSpecialHeadReanimID = mApp->ReanimationGetID(aHeadReanim);
         AttachEffect* aAttachEffect = AttachReanim(aTrackInstance->mAttachmentID, aHeadReanim, 0.0f, 0.0f);
@@ -762,6 +767,7 @@ void Zombie::ZombieInitialize(int theRow, ZombieType theType, bool theVariant, Z
         ReanimatorTrackInstance* aTrackInstance = aBodyReanim->GetTrackInstanceByName("anim_head1");
         aTrackInstance->mImageOverride = IMAGE_BLANK;
         Reanimation* aHeadReanim = mApp->AddReanimation(0.0f, 0.0f, 0, ReanimationType::REANIM_SQUASH);
+        GetZombotanyHeadReanim(*aHeadReanim);
         aHeadReanim->PlayReanim("anim_idle", ReanimLoopType::REANIM_LOOP, 0, 15.0f);
         mSpecialHeadReanimID = mApp->ReanimationGetID(aHeadReanim);
         AttachEffect* aAttachEffect = AttachReanim(aTrackInstance->mAttachmentID, aHeadReanim, 0.0f, 0.0f);
@@ -10431,4 +10437,19 @@ void Zombie::SetupWaterTrack(const char* theTrackName)
     aTrackInstance->mIgnoreExtraAdditiveColor = true;
     aTrackInstance->mIgnoreColorOverride = true;
     aTrackInstance->mIgnoreClipRect = true;
+}
+
+void Zombie::GetZombotanyHeadReanim(Reanimation& aHeadReanim) {
+    for (int i = 0; i < aHeadReanim.mDefinition->mTrackCount; i++)
+    {
+        ReanimatorTrack& aTrack = aHeadReanim.mDefinition->mTracks[i];
+
+        if (strncmp(aTrack.mName, "skin_", 5) == 0)
+        {
+            aHeadReanim.AssignRenderGroupToTrack(
+                aTrack.mName,
+                RENDER_GROUP_HIDDEN
+            );
+        }
+    }
 }

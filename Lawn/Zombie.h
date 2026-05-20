@@ -393,6 +393,7 @@ public:
     void                            SetupReanimForLostArm(unsigned int theDamageFlags);
     bool                            IsSquashTarget(Plant* theExcept);
     static /*inline*/ bool			IsZombotany(ZombieType theZombieType);
+    void                            GetZombotanyHeadReanim(Reanimation& aHeadReanim);
 };
 
 class ZombieDefinition
